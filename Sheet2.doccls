@@ -1,0 +1,31 @@
+﻿
+
+Private Sub FireButton_Click()
+
+    
+    Call FireShot
+    ThisWorkbook.Sheets("Player1").Activate
+
+End Sub
+
+
+Private Sub NewGameButton_Click()
+
+    Call NewGame
+    ThisWorkbook.Sheets("Player1").Activate
+    StartGameButton.Visible = True
+    FireButton.Visible = False
+    NewGameButton.Visible = False
+
+End Sub
+
+Private Sub StartGameButton_Click()
+
+
+    Call StartGame("Player1", "Player2")
+    ThisWorkbook.Sheets("Player1").Activate
+    NewGameButton.Visible = True
+    FireButton.Visible = True
+    StartGameButton.Visible = False
+
+End Sub
